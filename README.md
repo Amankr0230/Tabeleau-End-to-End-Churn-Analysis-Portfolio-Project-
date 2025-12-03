@@ -39,7 +39,37 @@ summarizes totals (6,418 customers, 411 new joiners), churn rate (27.0%), total 
 **Deliverables** – SQL scripts, cleaned dataset, Tableau dashboards, Python model, and project documentation.
 
 
-![Dashboard Screenshot](images/Screenshot_2025-11-27_182137.png)
+
+# workflow diagram
+
+*SQL Server (ETL & cleaned data)
+
+*Import raw CSV → staging tables → cleaning & transformations → final churn table/views (e.g., vw_ChurnData).​
+
+*Tableau
+
+* Connect Tableau to SQL Server → build churn summary, demographics, tenure, payment, and state dashboards.​
+
+* Google Collab (Python Random Forest)
+
+* Read cleaned data from SQL Server (via pyodbc/sqlalchemy) into pandas.
+
+* Do feature engineering, train RandomForestClassifier, generate predictions (Customer_ID, churn_flag, churn_probability).
+
+* Predictions back to Tableau
+
+* Save predictions as CSV or write back to a SQL Server table (e.g., churn_predictions).
+
+* Connect Tableau to this predictions data, join on Customer_ID, and build “Predicted Churn Profile” and “Customers at Risk” dashboards.​
+
+## If you want, a new diagram image can be generated with boxes: “SQL Server → Tableau → Goggle Collab → Tableau (Predictions).”
+
+
+![Dashboard Screenshot](images/dashboard.png)
+
+
+![Dashboard Screenshot](images/predicteddashboard.png)
+
 
 
 
