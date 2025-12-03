@@ -39,6 +39,7 @@ summarizes totals (6,418 customers, 411 new joiners), churn rate (27.0%), total 
 **Deliverables** – SQL scripts, cleaned dataset, Tableau dashboards, Python model, and project documentation.
 
 
+![Dashboard Screenshot](images/Screenshot_2025-11-27_182137.png)
 
 
 
